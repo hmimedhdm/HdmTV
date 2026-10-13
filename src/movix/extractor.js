@@ -24,7 +24,7 @@ const FAST_HOSTS = ['voe', 'uqload', 'fsvid', 'vidzy', 'netu', 'younetu', 'sendv
 // routes /api/{wiflix|j1f|cpasmal}). Utilisées en fallback après fstream :
 //   - wiflix : {players:{vf,vostfr:[{name,url,...}]}}  → films uniquement (TV=404)
 //   - j1f    : {players:{vf,vostfr:[{name,url,...}]}}  → films uniquement (TV=404)
-//   - cpasmal: {links:{vf,vostfr:[...]}}              → films + séries (souvent vide,
+//   - cpasmal: {links:{vf,vostfr:[...]}}               → films + séries (souvent vide,
 //     renvoie {"error":"Movie/TV Show not found (Cached)"} quand absent)
 // Tous sont déjà couverts par parseStreams (Format 1 players / Format 2 links).
 const FALLBACK_SOURCES = [
@@ -314,8 +314,8 @@ async function searchFallback(baseUrl, tmdbId, mediaType, season, episode) {
         // 3. Essayer chaque résultat jusqu'à trouver des sources
         // NB: le champ `id` des résultats est l'ID interne Movix (pas un TMDB id) ;
         // c'est `tmdb_id` qu'il faut utiliser pour /api/fstream. Vérifié en live :
-        //    /api/fstream/movie/72462 → error "Aucun contenu trouvé"
-        //    /api/fstream/movie/27205 → OK (Inception)
+        //   /api/fstream/movie/72462 → error "Aucun contenu trouvé"
+        //   /api/fstream/movie/27205 → OK (Inception)
         // Filtrer d'abord les candidats du bon type (évite de sonder des films
         // quand on cherche une série — l'API renvoie tout confondu).
         const wantedType = mediaType === 'movie' ? 'movie' : 'tv';
@@ -423,12 +423,12 @@ async function resolveStreamsToPlayable(streams, prefs, signal) {
     // Toujours traitées AVANT tout resolveStream. Élargit le plafond à 8 :
     // c'est la cause n°1 des "streams indisponibles" — des flux déjà jouables
     // restaient derrière les 2-3 premiers embeds en échec.
-    const MAX_RESOLVE = 8;       // résolutions réseau max (embeds uniquement)
-    const TARGET_PLAYABLE = 4;   // assez pour couvrir VF/VFF/VFQ + VOSTFR
+    const MAX_RESOLVE = 8;      // résolutions réseau max (embeds uniquement)
+    const TARGET_PLAYABLE = 4;  // assez pour couvrir VF/VFF/VFQ + VOSTFR
     const playable = [];
     const seenPlayable = new Set();
     const startTime = Date.now();
-    const BUDGET_MS = 20000;     // budget max de la résolution
+    const BUDGET_MS = 20000;    // budget max de la résolution
 
     const addPlayable = (result) => {
         if (result && !seenPlayable.has(result.url)) {
@@ -461,40 +461,7 @@ async function resolveStreamsToPlayable(streams, prefs, signal) {
     }
 
     console.log(`[Movix] Total: ${unique.length} streams, ${playable.length} playable (${Date.now() - startTime}ms)`);
-
-    // ─── Filtrage intelligent 720p / 1080p ─────────────────────────────────
-    const filteredPlayable = playable.filter(stream => {
-        const quality = (stream.quality || '').toLowerCase();
-        const title = (stream.title || '').toLowerCase();
-        const url = (stream.url || '').toLowerCase();
-        const textToSearch = `${quality} ${title} ${url}`;
-
-        // 1. Exclure explicitement les basses qualités (480p, 360p, SD)
-        const isLowQuality = 
-            textToSearch.includes('480') || 
-            textToSearch.includes('360') || 
-            textToSearch.includes('240') || 
-            textToSearch.includes('sd');
-
-        if (isLowQuality) return false;
-
-        // 2. Exclure le 4K / 2160p
-        const is4K = textToSearch.includes('4k') || textToSearch.includes('2160');
-        if (is4K) return false;
-
-        // 3. Détecter si c'est du 1080p, 720p ou HD/FHD
-        const is1080p = textToSearch.includes('1080') || textToSearch.includes('fhd') || textToSearch.includes('fullhd');
-        const is720p = textToSearch.includes('720') || textToSearch.includes('hd');
-
-        return is1080p || is720p;
-    });
-
-    // Sécurité de secours : si le filtre strict ne trouve rien (pas de métadonnée explicite),
-    // on rétablit la liste d'origine pour ne pas afficher un écran vide.
-    const resultStreams = filteredPlayable.length > 0 ? filteredPlayable : playable;
-
-    console.log(`[Movix] After 720p/1080p filter: ${resultStreams.length} stream(s) remaining`);
-    return resultStreams;
+    return playable;
 }
 
 // ─── Fonction principale d'extraction ────────────────────────────────────────
