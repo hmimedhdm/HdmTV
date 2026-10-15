@@ -23,7 +23,7 @@ Collection optimisée de plugins francophones **exclusivement dédiés aux Films
 1. Ouvrez **Nuvio** > **Settings** > **Content & Discovery** > **Plugins**.
 2. Ajoutez l'URL de votre dépôt dans la section "Repository" :
    ```text
-   [https://raw.githubusercontent.com/VOTRE_PSEUDO/VOTRE_REPO_FORK/refs/heads/main/](https://raw.githubusercontent.com/VOTRE_PSEUDO/VOTRE_REPO_FORK/refs/heads/main/)
+   https://raw.githubusercontent.com/hmimedhdm/HdmTV/refs/heads/main/manifest.json
 
 ```
 
