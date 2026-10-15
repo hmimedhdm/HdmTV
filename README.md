@@ -1,180 +1,157 @@
-# 🚀 Nuvio French Providers Bundle
+Voici le fichier **`README.md`** adapté pour votre fork **« No Animes Bundle »**.
+
+Toutes les sections liées aux animes ont été retirées, les statistiques (badges, tableaux, totaux) ont été ajustées pour ne conserver que les **11 providers de Films & Séries**, et la structure technique reste intacte.
+
+---
+
+```markdown
+# 🚀 Nuvio French Providers - No Animes Bundle
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.2.3-green.svg)](manifest.json)
-[![Providers](https://img.shields.io/badge/providers-37-brightgreen.svg)](manifest.json)
+[![Providers](https://img.shields.io/badge/providers-11-brightgreen.svg)](manifest.json)
 [![Runtime](https://img.shields.io/badge/runtime-QuickJS-orange.svg)](#-quickjs-runtime)
 
-An optimized collection of French streaming plugins for the **Nuvio** app. This bundle covers anime (VF/VOSTFR), movies and series with a direct-link resolution system for smooth playback on mobile **and TV**.
+Collection optimisée de plugins francophones **exclusivement dédiés aux Films et Séries** pour l'application **Nuvio** (sans contenu Anime). Ce bundle intègre un système de résolution de liens directs pour une lecture fluide sur mobiles **et téléviseurs (TV)**.
 
-> Versions and formats in this document are synchronized with [`manifest.json`](manifest.json) (repo **1.2.3**).
+> Les versions et formats dans ce document sont synchronisés avec le fichier [`manifest.json`](manifest.json) (version repo **1.2.3**).
 
 ---
 
-## 📱 Quick install
+## 📱 Installation rapide
 
-1. Open **Nuvio** > **Settings** > **Content & Discovery** > **Plugins**.
-2. Add the repository URL in the "Repository" section:
+1. Ouvrez **Nuvio** > **Settings** > **Content & Discovery** > **Plugins**.
+2. Ajoutez l'URL de votre dépôt dans la section "Repository" :
    ```text
-   https://raw.githubusercontent.com/Gowaru/gowaru-nuvio-providers/refs/heads/main/
-   ```
-3. Refresh, then enable the plugins you want.
+   [https://raw.githubusercontent.com/VOTRE_PSEUDO/VOTRE_REPO_FORK/refs/heads/main/](https://raw.githubusercontent.com/VOTRE_PSEUDO/VOTRE_REPO_FORK/refs/heads/main/)
+
+```
+
+3. Cliquez sur **Refresh**, puis activez les plugins de votre choix.
 
 ---
 
-## 🇫🇷 Included providers (37)
+## 🇫🇷 Providers inclus (11)
 
-This bundle ships **37 providers** covering the French streaming landscape — anime, movies & series, in VF and VOSTFR.
+Ce bundle intègre **11 providers** couvrant le catalogue francophone de **Films & Séries (VF / VOSTFR)**.
 
-### 📊 Anime (26)
+### 🎬 Films & Séries (11)
 
-| # | Provider | 🎬 Content | 🌐 Lang | 💾 Formats | 📱 App | 📺 TV | 🏷️ Ver. |
-| :-: | :--- | :---: | :---: | :---: | :---: | :---: | :-: |
-| 1 | **ADKami** | 🎬📺 | FR / JA | — | ✅ | ✅ | 0.1.2 |
-| 2 | **Anime-Sama** | 🎬📺 | VF / VOSTFR | MP4, MKV | ✅ | ✅ | 1.1.58 |
-| 3 | **AnimeSite** | 🎬📺 | FR / JA | — | ✅ | ✅ | 0.1.3 |
-| 4 | **Anime-Ultime** ¹ | 🎬📺 | VF / VOSTFR | MP4 | ✅ | ✅ | 0.0.5 |
-| 5 | **AnimeVOST.fr** | 📺 _only_ | VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.1.2 |
-| 6 | **AnimeVOSTFR** | 🎬📺 | VF / VOSTFR | MP4, MKV | ✅ | ✅ | 1.1.54 |
-| 7 | **AnimesUltra** | 🎬📺 | VF / VOSTFR | MP4, MKV | ✅ | ✅ | 1.0.39 |
-| 8 | **AnimeSama.co (DLE Mirror)** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.14 |
-| 9 | **AnimoFlix** | 🎬📺 | VF / VOSTFR | MP4, MKV | ✅ | ✅ | 1.0.19 |
-| 10 | **Aniverse** | 🎬📺 | FR / JA | M3U8 | ✅ | ✅ | 0.2.2 |
-| 11 | **Franime** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.0.3 |
-| 12 | **FullAnime** | 🎬📺 | VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.0.5 |
-| 13 | **French-Anime** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.1.3 |
-| 14 | **French-Manga** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.15 |
-| 15 | **Jetanimes** | 📺 _only_ | VOSTFR | — | ✅ | ✅ | 0.1.3 |
-| 16 | **Mugiwara-no-Streaming** | 🎬📺 | VF / VOSTFR | MP4, MKV, M3U8 | ✅ | ✅ | 1.0.20 |
-| 17 | **Neko-Sama** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.0.4 |
-| 18 | **SenAnimes** | 🎬📺 | FR / JA | — | ✅ | ✅ | 0.1.2 |
-| 19 | **Sekai** ² | 🎬📺 | VF / VOSTFR | MP4, MKV | ✅ | ⚠️ | 1.0.26 |
-| 20 | **VoirAnime** ³ | 🎬📺 | VF / VOSTFR | MP4, MKV, M3U8 | ✅ | ⚠️ | 1.2.25 |
-| 21 | **VoirAnime.homes** _DLE_ | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.1.3 |
-| 22 | **VoirAnime.one** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.1.2 |
-| 23 | **VoirAnime.rip** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.16 |
-| 24 | **VoiranimeBE** | 🎬📺 | VOSTFR / JA | — | ✅ | ✅ | 0.1.2 |
-| 25 | **Vostfree** | 🎬📺 | VF / VOSTFR | MP4, MKV | ✅ | ✅ | 1.1.56 |
-| 26 | **WaveAnime** ⁴ | 🎬📺 | VF / VOSTFR | DASH | ✅ | ✅ | 0.0.9 |
+| # | Provider | 🎬 Contenu | 🌐 Langues | 💾 Formats | 📱 App | 📺 TV | 🏷️ Ver. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | **Coflix** ¹ | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ⚠️ | 2.0.4 |
+| 2 | **DuLourd** | 📺 *seule* | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.14 |
+| 3 | **Flemmix** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.13 |
+| 4 | **Frenchstream** ⚙️ | 🎬📺 | VF / VOSTFR | MP4, MKV, M3U8 | ✅ | ✅ | 2.0.23 |
+| 5 | **Movix** ⚙️ | 🎬📺 | VF / VOSTFR | MP4, MKV, M3U8 | ✅ | ✅ | 0.1.4 |
+| 6 | **Nakios** | 🎬📺 | FR / EN | MP4 | ✅ | ✅ | 1.0.4 |
+| 7 | **Papadustream** | 🎬📺 | FR / EN | M3U8 | ✅ | ✅ | 1.1.1 |
+| 8 | **StreamZo** | 🎬📺 | VF / VOSTFR | M3U8 | ✅ | ✅ | 1.0.7 |
+| 9 | **Voirdrama** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.0.4 |
+| 10 | **Webflix** ⚙️ | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.1.4 |
+| 11 | **Wookafr** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.15 |
 
-### 🎬 Movies & Series (11)
-
-| # | Provider | 🎬 Content | 🌐 Lang | 💾 Formats | 📱 App | 📺 TV | 🏷️ Ver. |
-| :-: | :--- | :---: | :---: | :---: | :---: | :---: | :-: |
-| 27 | **Coflix** ⁵ | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ⚠️ | 2.0.4 |
-| 28 | **DuLourd** | 📺 _only_ | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.14 |
-| 29 | **Flemmix** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.13 |
-| 30 | **Frenchstream** ⚙️ | 🎬📺 | VF / VOSTFR | MP4, MKV, M3U8 | ✅ | ✅ | 2.0.23 |
-| 31 | **Movix** ⚙️ | 🎬📺 | VF / VOSTFR | MP4, MKV, M3U8 | ✅ | ✅ | 0.1.4 |
-| 32 | **Nakios** | 🎬📺 | FR / EN | MP4 | ✅ | ✅ | 1.0.4 |
-| 33 | **Papadustream** | 🎬📺 | FR / EN | M3U8 | ✅ | ✅ | 1.1.1 |
-| 34 | **StreamZo** | 🎬📺 | VF / VOSTFR | M3U8 | ✅ | ✅ | 1.0.7 |
-| 35 | **Voirdrama** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.0.4 |
-| 36 | **Webflix** ⚙️ | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 0.1.4 |
-| 37 | **Wookafr** | 🎬📺 | VF / VOSTFR | MP4, M3U8 | ✅ | ✅ | 1.0.15 |
-
-> **Legend:**
-> - 🎬📺 = Movies & Series | 📺 _only_ = Series only
-> - ✅ = Working | ⚠️ = Known limitations (see notes)
-> - 📱 App = NuvioMobile (Android/iOS) | 📺 TV = NuvioTV
-> - ⚙️ = Provider with a built-in settings UI (`hasSettings`)
-> - Formats "—": formats not declared in the manifest (multi-quality players via resolver)
->
-> **Notes:**
-> - ¹ **Anime-Ultime**: licensed series are excluded by the site (catalog limited to unlicensed animes).
-> - ² **Sekai**: direct MP4s (1080p/720p/360p) — multi-variant probing with rate limiting can exceed NuvioTV's 30 s window on large titles; disabled on TV (`disabledPlatforms: ["tv"]`).
-> - ³ **VoirAnime**: multi-host resolution (Sibnet, Uqload, Voe, Dood, Vidzy…) — the slowest titles can exceed NuvioTV's 30 s window; disabled on TV.
-> - ⁴ **WaveAnime**: native DASH (MPD) playback via ExoPlayer/Media3 on NuvioMobile (Android) **and NuvioTV**. External ASS subtitles: NuvioMobile only (NuvioTV ignores the `subtitles` field).
-> - ⁵ **Coflix**: multi-domain probing + `lecteurvideo` embeds — falls back to embed links (not natively playable) when direct resolution fails.
+> **Légende :**
+> * 🎬📺 = Films & Séries | 📺 *seule* = Séries uniquement
+> * ✅ = Fonctionnel | ⚠️ = Limitations connues (voir remarques)
+> * 📱 App = NuvioMobile (Android/iOS) | 📺 TV = NuvioTV
+> * ⚙️ = Provider avec interface de paramètres intégrée (`hasSettings`)
+> * Formats "—" : formats non déclarés dans le manifest (lecteurs multi-qualités via résolveur)
+> 
+> 
+> **Remarques :**
+> * ¹ **Coflix** : détection multi-domaines + intégrations `lecteurvideo` — bascule vers des liens embed si la résolution directe échoue.
+> 
+> 
 
 ---
 
-## 🛠️ Technical features
+## 🛠️ Fonctionnalités techniques
 
-- **Universal resolver**: automatic resolution engine for popular hosts (**Sibnet, Vidmoly, Uqload, VOE, XtremeStream, Sendvid, VidCDN, FSVID/Vidzy…**). No more `ExoPlaybackException` errors!
-  - **VOE**: classic player decoding (encoded payload ROT13 → base64 → shift → reverse → base64), multi-redirections of rotating domains, anti-decoy "Big Buck Bunny".
-  - **XtremeStream**: `video_id` extraction + `xs1.php` loader → signed m3u8 master (main player of the `lecteurvideo` embed).
-- **Fake-Direct filtering**: rejects sample links (Big Buck Bunny, known test URLs) before they reach the player.
-- **HLS quality expansion**: HLS masters are expanded into selectable resolutions (`2160p`, `1080p`, `720p`, `480p`, `360p`).
-- **Direct-Only Safety**: strictly outputs direct links (`.m3u8`, `.mp4`…) to reduce ExoPlayer errors; unresolved HTML embeds (`isDirect:false`) are **never** returned.
-- **Episode-mismatch guard**: strict season/episode validation (no silent fallback to another season), ArmSync for absolute numbering, anti-fan-edit and anti-homonym safeguards (title scoring).
-- **Per-provider settings**: in-app UI (header/info/text/select/toggle) via `SCRAPER_SETTINGS` — driving providers: Frenchstream, Movix, Webflix.
-- **QuickJS-optimized**: string ops + `atob`/`btoa` polyfills, no `Buffer`/`setTimeout`/`process`, in-house time budgets (60 s plugin).
+* **Résolveur universel** : moteur de résolution automatique pour les hébergeurs populaires (**Sibnet, Vidmoly, Uqload, VOE, XtremeStream, Sendvid, VidCDN, FSVID/Vidzy…**).
+* **VOE** : décodage du lecteur classique (payload encodé ROT13 → base64 → décalage → inversion → base64), redirections multiples de domaines.
+* **XtremeStream** : extraction de `video_id` + chargeur `xs1.php` → master m3u8 signé.
 
-### 🔧 Environment variables
 
-| Variable | Provider | Default | Description |
-| :--- | :--- | :-: | :--- |
-| `NUVIO_NAKIOS_EXCLUDE_PREMIUM` | Nakios | `0` | `1` = excludes premium sources. If no free source is available, the provider returns 0 streams. |
+* **Filtrage des faux flux directs** : rejet automatique des URLs de test / échantillons avant la lecture.
+* **Expansion de qualité HLS** : conversion des fichiers HLS master en résolutions sélectionnables (`2160p`, `1080p`, `720p`, `480p`, `360p`).
+* **Direct-Only Safety** : sortie stricte de liens directs (`.m3u8`, `.mp4`…) pour éliminer les erreurs ExoPlayer.
+* **Sécurité d'épisode** : validation stricte saison/épisode (pas de bascule silencieuse vers une autre saison) et filtres anti-homonymes.
+* **Paramètres par provider** : interface embarquée dans l'application pour Frenchstream, Movix et Webflix.
+* **Optimisé QuickJS** : polyfills pour opérations chaînes + `atob`/`btoa`, compatible avec le runtime embarqué des téléviseurs.
+
+### 🔧 Variables d'environnement
+
+| Variable | Provider | Par défaut | Description |
+| --- | --- | --- | --- |
+| `NUVIO_NAKIOS_EXCLUDE_PREMIUM` | Nakios | `0` | `1` = exclut les sources premium. Si aucune source gratuite n'est disponible, le provider renvoie 0 flux. |
 
 ---
 
-## 👨‍💻 For contributors
+## 👨‍💻 Pour les contributeurs
 
-### Project structure
+### Structure du projet
 
 ```text
 gowaru-nuvio-providers/
-├── src/                      # Source code (one folder per provider)
-│   ├── utils/                # Shared logic (resolvers, http, cache, metadata…)
+├── src/                      # Code source (un dossier par provider)
+│   ├── utils/                # Logique partagée (résolveurs, http, cache, métadonnées…)
 │   └── <provider>/
-│       ├── index.js          # Entry point (exports getStreams + onSettings)
-│       ├── extractor.js      # HTML/API extraction
-│       ├── http.js           # fetchText/fetchJson wrappers (anti-Cloudflare headers)
-│       └── config.js         # Constants (optional)
-├── providers/                # Compiled files — DO NOT EDIT (esbuild IIFE build)
-├── manifest.json             # Plugin registry (versions, formats, platforms)
-├── build.js                  # Bundling script (esbuild)
-└── test_providers.js         # Integration tests (node test_providers.js [provider…])
+│       ├── index.js          # Point d'entrée (export getStreams + onSettings)
+│       ├── extractor.js      # Extraction HTML/API
+│       ├── http.js           # Wrappers fetchText/fetchJson (en-têtes anti-Cloudflare)
+│       └── config.js         # Constantes (optionnel)
+├── providers/                # Fichiers compilés (build esbuild IIFE)
+├── manifest.json             # Registre des plugins (versions, formats, plateformes)
+├── build.js                  # Script de compilation (esbuild)
+└── test_providers.js         # Tests d'intégration (node test_providers.js [provider…])
+
 ```
 
-### Provider API
+### Signature API d'un Provider
 
 ```js
-// Mandatory signature
+// Signature obligatoire
 getStreams(tmdbId, mediaType, season, episode) → Promise<Array<Stream>>
-// Stream: { url (required), title, name, quality, headers, language, size, subtitles… }
+// Stream: { url (requis), title, name, quality, headers, language, size, subtitles… }
+
 ```
 
-### Setup
+### Configuration & Commandes
 
 ```bash
 npm install
 
-# Build all providers (dev, non-minified)
+# Compiler tous les providers (développement)
 npm run build
 
-# Minified build (used by CI)
+# Build minifié (utilisé en CI/Production)
 npm run build:minify
 
-# Single provider
+# Compiler un seul provider
 node build.js frenchstream
 
-# Watch mode (development)
+# Mode Watch (développement)
 npm run build:watch
 
-# Local server (manifest + providers at http://<local-ip>:3000)
+# Serveur local (manifest + providers sur http://<ip-locale>:3000)
 npm run serve
 
-# Integration tests
+# Tests d'intégration
 node test_providers.js frenchstream wookafr
+
 ```
 
-### Code conventions
+---
 
-- HTML parsing with `cheerio-without-node-native` (no DOM manipulation: empty `.parent()`).
-- Use per-provider `http.js` wrappers (required headers, no raw `fetch`).
-- Process final URLs through `resolveStream` / `toStream` from `src/utils/resolvers.js`.
-- **QuickJS runtime**: no `Buffer`, `setTimeout`, `process`, `crypto.subtle` (TV); atob/btoa OK; time budgets rather than timeouts.
-- Targets **ES2020** (native async/await).
-- Update `manifest.json` (patch version) when adding/removing/modifying a provider.
-- Never write `supportedPlatforms:["tv"]` nor `disabledPlatforms:["android"|"ios"]` (would hide the provider on Mobile).
+## 📜 Licence
+
+Distribué sous licence **GPL-3.0** — voir le fichier [LICENSE](https://www.google.com/search?q=LICENSE) pour plus de détails.
 
 ---
 
-## 📜 License
+*Fork basé sur les travaux initiaux de Gowaru — Adapté pour un usage Films & Séries uniquement.*
 
-Distributed under the **GPL-3.0** license — see the [LICENSE](LICENSE) file.
+```
 
----
-*Maintained by Gowaru.*
+```
