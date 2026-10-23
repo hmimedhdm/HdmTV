@@ -1,4 +1,4 @@
-const BASE_URL = "https://www.krmzi.cam"; //[cite: 1]
+const BASE_URL = "https://www.qrmzi.tv/all-turkish-series/"; //[cite: 1]
 
 function getStreams(tmdbId, mediaType, season, episode) {
   console.log(`[Kirmzi] Fetching ${mediaType} with TMDB ID: ${tmdbId}`);
