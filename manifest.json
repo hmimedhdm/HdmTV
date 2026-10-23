@@ -29,6 +29,16 @@
       "supportsExternalPlayer": true
     },
     {
+  "id": "kirmzi",
+  "name": "Kirmzi",
+  "description": "Kirmzi streaming provider for movies and TV shows",
+  "version": "1.0.0",
+  "filename": "providers/kirmzi.js",
+  "supportedTypes": ["movie", "tv"],
+  "enabled": true,
+  "contentLanguage": ["ar", "tr"]
+}
+    {
       "id": "movix",
       "name": "Movix",
       "description": "Films, Séries et Animes en VF et VOSTFR.",
